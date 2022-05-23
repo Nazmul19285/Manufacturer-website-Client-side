@@ -30,7 +30,7 @@ const Navbar = () => {
                                 <CustomLink to='/home'>Home</CustomLink>
                             </li>
                             <li className="nav-item font-bold text-lg lg:ml-6">
-                                <CustomLink to='/store'>Store</CustomLink>
+                                <CustomLink to='/store/allproducts'>Store</CustomLink>
                             </li>
                             <li className="nav-item font-bold text-lg lg:ml-6">
                                 <CustomLink to='/blogs'>Blogs</CustomLink>
