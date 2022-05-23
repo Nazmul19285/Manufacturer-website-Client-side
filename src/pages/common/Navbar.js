@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import logo from '../../images/logo.png'
-import { MenuIcon } from '@heroicons/react/solid'
+import logo from '../../images/logo.png';
+import { MenuIcon } from '@heroicons/react/solid';
 import CustomLink from './CustomLink';
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
     return (
         <>
-            <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-50 py-4">
+            <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-50 py-4 sticky top-0 z-50">
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <a href="/"><img className='w-44 h-full' src={logo} alt="logo" /></a>
