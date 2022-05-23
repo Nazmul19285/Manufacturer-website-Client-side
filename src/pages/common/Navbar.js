@@ -7,10 +7,10 @@ const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
     return (
         <>
-            <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-50 mb-3">
+            <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-50 py-4">
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-                        <img className='w-32 h-full lg:w-44' src={logo} alt="" />
+                        <a href="/"><img className='w-44 h-full' src={logo} alt="logo" /></a>
                         <MenuIcon
                             className="cursor-pointer w-10 leading-none border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                             type="button"
@@ -31,6 +31,9 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item font-bold text-lg lg:ml-6">
                                 <CustomLink to='/store'>Store</CustomLink>
+                            </li>
+                            <li className="nav-item font-bold text-lg lg:ml-6">
+                                <CustomLink to='/blogs'>Blogs</CustomLink>
                             </li>
                         </ul>
                     </div>
