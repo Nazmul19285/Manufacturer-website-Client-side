@@ -34,16 +34,21 @@ const Navbar = () => {
                         id="example-navbar-danger"
                     >
                         <ul className="flex flex-col lg:flex-row list-none lg:ml-auto mt-4 lg:mt-0">
-                            <li className="nav-item font-bold text-lg lg:ml-6">
+                            <li className="nav-item text-lg lg:ml-6">
                                 <CustomLink to='/home'>Home</CustomLink>
                             </li>
-                            <li className="nav-item font-bold text-lg lg:ml-6">
+                            <li className="nav-item text-lg lg:ml-6">
                                 <CustomLink to='/store/allproducts'>Store</CustomLink>
                             </li>
-                            <li className="nav-item font-bold text-lg lg:ml-6">
+                            <li className="nav-item text-lg lg:ml-6">
                                 <CustomLink to='/blogs'>Blogs</CustomLink>
                             </li>
-                            <li className="nav-item font-bold text-lg lg:ml-6">
+                            <li className="nav-item text-lg lg:ml-6">
+                                {
+                                    user? <CustomLink to='/dashboard'>Dashboard</CustomLink>:''
+                                }
+                            </li>
+                            <li className="nav-item text-lg lg:ml-6">
                                 {
                                     user? <button onClick={logout}>Logout</button>
                                     :
