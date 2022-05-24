@@ -2,9 +2,17 @@ import React, { useState } from 'react';
 import logo from '../../images/logo.png';
 import { MenuIcon } from '@heroicons/react/solid';
 import CustomLink from './CustomLink';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const [user] = useAuthState(auth);
+
+    const logout = () => {
+        signOut(auth);
+    }
     return (
         <>
             <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-50 py-4 sticky top-0 z-50">
@@ -34,6 +42,13 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item font-bold text-lg lg:ml-6">
                                 <CustomLink to='/blogs'>Blogs</CustomLink>
+                            </li>
+                            <li className="nav-item font-bold text-lg lg:ml-6">
+                                {
+                                    user? <button onClick={logout}>Logout</button>
+                                    :
+                                    <CustomLink to='/login'>Login</CustomLink>
+                                }
                             </li>
                         </ul>
                     </div>
