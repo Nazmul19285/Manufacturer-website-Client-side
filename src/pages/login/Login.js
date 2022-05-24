@@ -44,8 +44,8 @@ const Login = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         {/* Email field */}
                         <div className="form-control w-full max-w-xs">
-                            <label className="label label-text">Email</label>
-                            <input type="text" placeholder="Your Email" className="input input-bordered w-full max-w-xs"
+                            <label className="label label-text">Email*</label>
+                            <input type="email" placeholder="Your Email" className="input input-bordered w-full max-w-xs"
                                 {...register("email", {
                                     required: {
                                         value: true,
@@ -64,7 +64,7 @@ const Login = () => {
 
                         {/* Password field */}
                         <div className="form-control w-full max-w-xs">
-                            <label className="label label-text">Password</label>
+                            <label className="label label-text">Password*</label>
                             <input type="password" placeholder="Your password" className="input input-bordered w-full max-w-xs"
                                 {...register("password", {
                                     required: {
