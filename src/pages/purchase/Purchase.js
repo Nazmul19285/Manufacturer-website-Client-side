@@ -59,6 +59,7 @@ const Purchase = () => {
             userPhone:`${e.target[2].value}`,
             userAddress:`${e.target[3].value}`,
             status: 'Unpaid',
+            transactionId: '',
         };
         const url = 'http://localhost:5000/orders';
         fetch(url, {
