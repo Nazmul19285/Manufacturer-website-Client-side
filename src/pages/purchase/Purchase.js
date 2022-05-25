@@ -26,7 +26,7 @@ const Purchase = () => {
 
     useEffect(() => {
         setTotalPrice(product?.price * quantity);
-    }, [quantity])
+    }, [quantity,product?.price])
 
     const quantityUp = () => {
         if (quantity < product.available_quantity) {

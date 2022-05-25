@@ -4,13 +4,13 @@ import CustomLink from '../common/CustomLink';
 
 const Dashboard = () => {
     return (
-        <div className='lg:flex justify-between'>
-            <div className='flex lg:flex-col justify-center lg:justify-start py-6 lg:space-y-4'>
-                <CustomLink className='ml-4 lg:ml-8 text-sm lg:text-lg' to='myorders'>My Orders</CustomLink>
-                <CustomLink className='ml-4 lg:ml-8 text-sm lg:text-lg' to='addreview'>Add A Review</CustomLink>
-                <CustomLink className='ml-4 lg:ml-8 text-sm lg:text-lg' to='myprofile'>My Profile</CustomLink>
+        <div className='lg:grid lg:grid-cols-6 mx-4 lg:mx-16 mt-8'>
+            <div className='flex lg:flex-col justify-center lg:justify-start lg:space-y-4 lg:mr-16'>
+                <CustomLink className='text-sm lg:text-lg' to='myorders'>My Orders</CustomLink>
+                <CustomLink className='text-sm lg:text-lg' to='addreview'>Add A Review</CustomLink>
+                <CustomLink className='text-sm lg:text-lg' to='myprofile'>My Profile</CustomLink>
             </div>
-            <div>
+            <div className='lg:col-span-5'>
                 <Outlet></Outlet>
             </div>
         </div>

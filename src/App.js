@@ -10,6 +10,7 @@ import MyOrders from './pages/dashboard/MyOrders';
 import MyProfile from './pages/dashboard/MyProfile';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
+import Payment from './pages/payment/Payment';
 import Register from './pages/login/Register';
 import Purchase from './pages/purchase/Purchase';
 import AllProducts from './pages/store/AllProducts';
@@ -30,6 +31,7 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/payment/:id' element={<RequireAuth><Payment></Payment></RequireAuth>}></Route>
 
         <Route path='/store' element={<Store></Store>}>
           <Route path='allproducts' element={<AllProducts></AllProducts>}></Route>
