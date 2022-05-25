@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import taka from '../../images/taka.png';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Purchase = () => {
     const [user, loading, error] = useAuthState(auth);
+    const navigate = useNavigate();
     const { _id } = useParams();
     const [product, setProduct] = useState({});
     const [quantity, setQuantity] = useState();
@@ -45,8 +48,32 @@ const Purchase = () => {
     }
     const placeOrder = (e) => {
         e.preventDefault();
+        const data = {
+            productId:`${product._id}`,
+            productName:`${product.name}`,
+            productImage:`${product.img}`,
+            quantity:`${quantity}`,
+            totalPrice:`${totalPrice}`,
+            userName:`${user.displayName}`,
+            userEmail:`${user.email}`,
+            userPhone:`${e.target[2].value}`,
+            userAddress:`${e.target[3].value}`,
+            status: 'Unpaid',
+        };
+        const url = 'http://localhost:5000/orders';
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(result => {
+            toast('Placing Order');
+        });
+        setTimeout(() => {  navigate("/dashboard/myorders"); }, 4000);
     }
-    console.log(user.displayName);
     return (
         <div className='px-4 lg:flex justify-center lg:mt-12'>
             <div>
@@ -100,6 +127,7 @@ const Purchase = () => {
                     </form>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

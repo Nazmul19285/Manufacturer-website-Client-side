@@ -26,35 +26,39 @@ const Navbar = () => {
                         >
                         </MenuIcon>
                     </div>
-                    <div
-                        className={
-                            "lg:flex flex-grow items-center" +
-                            (navbarOpen ? " flex" : " hidden")
-                        }
-                        id="example-navbar-danger"
-                    >
-                        <ul className="flex flex-col lg:flex-row list-none lg:ml-auto mt-4 lg:mt-0">
-                            <li className="nav-item text-lg lg:ml-6">
-                                <CustomLink to='/home'>Home</CustomLink>
-                            </li>
-                            <li className="nav-item text-lg lg:ml-6">
-                                <CustomLink to='/store/allproducts'>Store</CustomLink>
-                            </li>
-                            <li className="nav-item text-lg lg:ml-6">
-                                <CustomLink to='/blogs'>Blogs</CustomLink>
-                            </li>
-                            <li className="nav-item text-lg lg:ml-6">
-                                {
-                                    user? <CustomLink to='/dashboard'>Dashboard</CustomLink>:''
-                                }
-                            </li>
-                            <li className="nav-item text-lg lg:ml-6">
-                                {
-                                    user? <button onClick={logout}>Logout</button>
-                                    :
-                                    <CustomLink to='/login'>Login</CustomLink>
-                                }
-                            </li>
+                    <div className={"lg:flex flex-grow items-center" + (navbarOpen ? " flex" : " hidden")}
+                        id="example-navbar-danger">
+                        <ul className="flex flex-row lg:items-center list-none lg:ml-auto mt-4 lg:mt-0">
+                            <div className='lg:flex'>
+                                <li className="nav-item text-lg lg:ml-6">
+                                    <CustomLink to='/home'>Home</CustomLink>
+                                </li>
+                                <li className="nav-item text-lg lg:ml-6">
+                                    <CustomLink to='/store/allproducts'>Store</CustomLink>
+                                </li>
+                                <li className="nav-item text-lg lg:ml-6">
+                                    <CustomLink to='/blogs'>Blogs</CustomLink>
+                                </li>
+                                <li className="nav-item text-lg lg:ml-6">
+                                    {
+                                        user ? <CustomLink to='/dashboard/myorders'>Dashboard</CustomLink> : ''
+                                    }
+                                </li>
+                            </div>
+                            <div className='ml-16 lg:ml-0'>
+                                <li className="nav-item text-lg lg:ml-6">
+                                    {
+                                        user ? <div class="dropdown dropdown-hover">
+                                            <label tabindex="0" class="btn m-1">{user.displayName}</label>
+                                            <ul tabindex="0" class="dropdown-content menu shadow w-full">
+                                                <button className='btn btn-sm btn-success' onClick={logout}>Logout</button>
+                                            </ul>
+                                        </div>
+                                            :
+                                            <CustomLink to='/login'>Login</CustomLink>
+                                    }
+                                </li>
+                            </div>
                         </ul>
                     </div>
                 </div>
