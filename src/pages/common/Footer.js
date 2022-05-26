@@ -29,7 +29,7 @@ const Footer = () => {
                     <a target="blank" href="https://twitter.com/MdNazmu24770112"><img className='w-8 lg:w-12 mr-2 rounded-xl hover:border-4' src={twitter} alt="twitter" /></a>
                 </div>
             </div>
-            <div>
+            <div className='mt-12'>
                 <div className='mx-4 lg:flex justify-center'>
                     <div className=''>
                         <img className='w-32 rotate-[-8deg]' src={logo} alt="" />
@@ -70,7 +70,7 @@ const Footer = () => {
                         <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Affiliates</a>
                     </div>
                 </div>
-                <div className='flex justify-center my-10'>
+                <div className='flex justify-center mt-28 mb-8'>
                     <img className='w-8 ml-2 h-full lg:ml-4' src={amazonpay} alt="amazon pay" />
                     <img className='w-8 ml-2 h-full lg:ml-4' src={amex} alt="amex" />
                     <img className='w-8 ml-2 h-full lg:ml-4' src={applepay} alt="apple pay" />

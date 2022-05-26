@@ -19,6 +19,12 @@ import Frame from './pages/store/Frame';
 import FrontSet from './pages/store/FrontSet';
 import Store from './pages/store/Store';
 import Wheel from './pages/store/Wheel';
+import ManageOrders from './pages/dashboard/ManageOrders';
+import ManageStore from './pages/dashboard/ManageStore';
+import ManageUser from './pages/dashboard/ManageUser';
+import PageNotFound from './pages/pageNotFound/PageNotFound';
+import AddAProduct from './pages/dashboard/AddAProduct';
+import Portfolio from './pages/common/Portfolio';
 
 function App() {
   return (
@@ -32,6 +38,9 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/payment/:id' element={<RequireAuth><Payment></Payment></RequireAuth>}></Route>
+        <Route path='/addproduct' element={<AddAProduct></AddAProduct>}></Route>
+        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
+        
 
         <Route path='/store' element={<Store></Store>}>
           <Route path='allproducts' element={<AllProducts></AllProducts>}></Route>
@@ -45,7 +54,12 @@ function App() {
           <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='manageorders' element={<ManageOrders></ManageOrders>}></Route>
+          <Route path='managestore' element={<ManageStore></ManageStore>}></Route>
+          <Route path='manageuser' element={<ManageUser></ManageUser>}></Route>
         </Route>
+
+        <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

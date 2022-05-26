@@ -40,6 +40,9 @@ const Navbar = () => {
                                     <CustomLink to='/blogs'>Blogs</CustomLink>
                                 </li>
                                 <li className="nav-item text-lg lg:ml-6">
+                                    <CustomLink to='/portfolio'>My Portfolio</CustomLink>
+                                </li>
+                                <li className="nav-item text-lg lg:ml-6">
                                     {
                                         user ? <CustomLink to='/dashboard/myorders'>Dashboard</CustomLink> : ''
                                     }

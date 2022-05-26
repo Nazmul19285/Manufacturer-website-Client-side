@@ -5,7 +5,7 @@ const useSetUser = user => {
     useEffect(() => {
         const email = user?.user?.email;
         const currentUser = {
-            role: '',
+            
         };
         if (email) {
             const url = `http://localhost:5000/user/${email}`;

@@ -13,7 +13,7 @@ const AllProducts = () => {
     // console.log(products);
 
     return (
-        <div className='mt-8 lg:w-10/12 lg:grid lg:grid-cols-4 mx-auto mb-20'>
+        <div className='mt-8 lg:w-10/12 lg:grid lg:grid-cols-4 gap-4 mx-auto mb-20'>
             {
                 products.map(product => <DisplayProduct key={product._id} product={product}></DisplayProduct>)
             }

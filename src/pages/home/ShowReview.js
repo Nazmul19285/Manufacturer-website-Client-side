@@ -14,9 +14,10 @@ const ShowReview = ({ review }) => {
                     <h3 className='text-gray-400'>{review.reviewDate}</h3>
                 </div>
             </div>
+            <h1>Ratings: {review.ratings} out of 5</h1>
             <div className='grid bg-gray-300 min-h-[100px] relative'>
                 <div className='bg-green-400 w-20 h-20 justify-self-end absolute -top-2 -right-2'></div>
-                <div className='z-50'>
+                <div className='z-40'>
                     <h1 className='text-lg p-4'>{review.review}</h1>
                 </div>
                 <div className='bg-yellow-400 w-44 h-20 absolute -bottom-2 -left-2'></div>
