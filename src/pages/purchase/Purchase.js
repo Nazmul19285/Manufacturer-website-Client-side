@@ -121,7 +121,7 @@ const Purchase = () => {
                         <label className="label label-text">Your Email</label>
                         <input disabled className="input input-bordered w-full max-w-xs" type="text" value={user?.email} />
                         <label className="label label-text">Phone Number*</label>
-                        <input className="input input-bordered w-full max-w-xs appearance-none" placeholder='Phone Number5' type="number" required />
+                        <input className="input input-bordered w-full max-w-xs appearance-none" placeholder='Phone Number' type="number" required />
                         <label className="label label-text">Address*</label>
                         <input className="input input-bordered w-full max-w-xs appearance-none" placeholder='Address' type="text" required />
                         <input className='btn btn-outline btn-info text-black w-full max-w-xs mt-4' type="submit" value="PLACE ORDER" />

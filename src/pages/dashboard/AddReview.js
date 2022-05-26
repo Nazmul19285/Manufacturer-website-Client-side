@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const AddReview = () => {
     const [user, loading, error] = useAuthState(auth);
+    const [userInDb, setUserInDb] = useState({});
+    const today = new Date().toDateString();
+
+    useEffect( () => {
+        fetch(`http://localhost:5000/user/${user.email}`)
+        .then(res => res.json())
+        .then(data => setUserInDb(data));
+    },[user])
     const getReview = (event) => {
         event.preventDefault();
 
         const data = {
             user:`${user.displayName}`,
+            email: `${user.email}`,
+            userImage: `${userInDb.image}`,
+            reviewDate: `${today}`,
             ratings:`${event.target[0].value}`,
             review:`${event.target[1].value}`,
             
