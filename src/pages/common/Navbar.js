@@ -48,9 +48,9 @@ const Navbar = () => {
                             <div className='ml-16 lg:ml-0'>
                                 <li className="nav-item text-lg lg:ml-6">
                                     {
-                                        user ? <div class="dropdown dropdown-hover">
-                                            <label tabindex="0" class="btn m-1">{user.displayName}</label>
-                                            <ul tabindex="0" class="dropdown-content menu shadow w-full">
+                                        user ? <div className="dropdown dropdown-hover">
+                                            <label tabIndex="0" className="btn m-1">{user.displayName}</label>
+                                            <ul tabIndex="0" className="dropdown-content menu shadow w-full">
                                                 <button className='btn btn-sm btn-success' onClick={logout}>Logout</button>
                                             </ul>
                                         </div>

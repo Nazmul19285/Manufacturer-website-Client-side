@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import taka from '../../images/taka.png';
 
 const ShowOrders = ({ order, cancelOrder }) => {
-    const { productImage, productName, quantity, totalPrice, status } = order;
+    const { productImage, productName, quantity, totalPrice, status, transactionId
+    } = order;
     const navigate = useNavigate();
     const goToPayment = () => {
         navigate(`/payment/${order._id}`);
@@ -20,7 +21,7 @@ const ShowOrders = ({ order, cancelOrder }) => {
                 </div>
             </td>
             <td>{status}<br></br>{status === 'Unpaid'? <button onClick={goToPayment} className='btn btn-xs'>Pay</button> : null}</td>
-            <td></td>
+            <td>{transactionId}</td>
             <td>{status === 'Unpaid'? <button onClick={cancelOrder} className='btn btn-xs'>Cancel</button>: null}</td>
         </tr>
 

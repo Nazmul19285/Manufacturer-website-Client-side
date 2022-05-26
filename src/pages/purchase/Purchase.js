@@ -73,7 +73,7 @@ const Purchase = () => {
         .then(result => {
             toast('Placing Order');
         });
-        setTimeout(() => {  navigate("/dashboard/myorders"); }, 4000);
+        setTimeout(() => {  navigate("/dashboard/myorders"); }, 3000);
     }
     return (
         <div className='px-4 lg:flex justify-center lg:mt-12'>

@@ -17,18 +17,18 @@ const Payment = () => {
             .then(data => setOrder(data));
     }, [id])
     return (
-        <div className='mt-8 lg:flex'>
-            <div className='bg-white w-[360px] drop-shadow px-6 pb-8 mx-4'>
-                <h1 className='text-2xl font-bold text-center'>Order Summary</h1>
+        <div className='py-12 lg:flex lg:justify-center bg-green-100'>
+            <div className='bg-white w-[360px] drop-shadow px-6 pt-4 pb-8 mx-4 rounded-lg'>
+                <h1 className='text-2xl font-bold text-center mt-4'>Order Summary</h1>
                 <img src={order.productImage} alt="" />
                 <h1>{order.productName}</h1>
                 <h1 className='mt-2'>Quantity: {order.quantity}</h1>
-                <h1 className='flex items-center text-lg mt-6'>Total Amount:
+                <div className='flex items-center text-lg mt-6'>Total Amount:
                     <img className='w-4 h-full mr-1 ml-4' src={taka} alt="" />
                     <p>{order.totalPrice}</p>
-                </h1>
+                </div>
             </div>
-            <div className='w-[360px] bg-white drop-shadow-lg p-8 mx-4'>
+            <div className='w-[360px] p-8 mx-4'>
                 <Elements stripe={stripePromise}>
                     <CheckoutForm order={order}></CheckoutForm>
                 </Elements>

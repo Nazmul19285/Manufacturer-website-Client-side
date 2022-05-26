@@ -68,7 +68,6 @@ const CheckoutForm = ({ order }) => {
 
     }
     useEffect(() => {
-        console.log(paymentInfo);
         if(!isEmpty(paymentInfo)){
             fetch(`http://localhost:5000/orders/${order._id}`, {
             method: 'PATCH',
@@ -83,15 +82,15 @@ const CheckoutForm = ({ order }) => {
     }, [paymentInfo])
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <CardElement
+            <form className='mt-10' onSubmit={handleSubmit}>
+                <CardElement className='border-2 border-gray-300 py-4 px-2'
                     options={{
                         style: {
                             base: {
-                                fontSize: '16px',
-                                color: '#424770',
+                                fontSize: '18px',
+                                color: '#000000',
                                 '::placeholder': {
-                                    color: '#aab7c4',
+                                    color: '#787878',
                                 },
                             },
                             invalid: {
@@ -100,7 +99,7 @@ const CheckoutForm = ({ order }) => {
                         },
                     }}
                 />
-                <button className='btn btn-sm btn-secondary' type="submit" disabled={!stripe || !clientSecret}>
+                <button className='btn btn-sm btn-secondary mt-8' type="submit" disabled={!stripe || !clientSecret}>
                     Pay Now
                 </button>
             </form>

@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useSetUser from '../../hooks/useSetUser';
 
 const Register = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [token] = useSetUser(googleUser || user);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate = useNavigate();
     const location = useLocation();
@@ -26,12 +28,12 @@ const Register = () => {
             </svg>
         </div>;
     }
-    if (googleUser || user) {
+    
+    if (token) {
         navigate(from, { replace: true });
     }
 
     const onSubmit = async data => {
-        console.log(data);
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
     };
