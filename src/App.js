@@ -25,6 +25,7 @@ import ManageUser from './pages/dashboard/ManageUser';
 import PageNotFound from './pages/pageNotFound/PageNotFound';
 import AddAProduct from './pages/dashboard/AddAProduct';
 import Portfolio from './pages/common/Portfolio';
+import UpdateProduct from './pages/dashboard/UpdateProduct';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path='/payment/:id' element={<RequireAuth><Payment></Payment></RequireAuth>}></Route>
         <Route path='/addproduct' element={<AddAProduct></AddAProduct>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
+        <Route path='/products/:id' element={<UpdateProduct></UpdateProduct>}></Route>
         
 
         <Route path='/store' element={<Store></Store>}>

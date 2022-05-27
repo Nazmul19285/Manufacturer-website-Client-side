@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import CustomLink from '../common/CustomLink';
 import ManageProducts from './ManageProducts';
 
 const ManageStore = () => {

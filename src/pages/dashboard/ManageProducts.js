@@ -1,7 +1,12 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import taka from '../../images/taka.png'
 
 const ManageProducts = ({ product, setReload, reload }) => {
+    const navigate = useNavigate();
+
+    const update = () => {
+        navigate(`/products/${product._id}`);
+    }
     const deleteProduct = () => {
         const proceed = window.confirm('You want to delete. Are you sure?');
         if (proceed) {
@@ -14,7 +19,7 @@ const ManageProducts = ({ product, setReload, reload }) => {
         }
     }
     return (
-        <div className='border w-[22rem] mx-auto mb-4 lg:mb-0 bg-white hover:drop-shadow-2xl relative rounded-lg'>
+        <div className='border w-[22rem] mx-auto mb-4 lg:mb-0 relative rounded-lg'>
             <div className='flex justify-center'>
                 <img src={product.img} alt={product.name} />
             </div>
@@ -28,9 +33,9 @@ const ManageProducts = ({ product, setReload, reload }) => {
                 <h3 className='mt-2'>Available quantity: {product.available_quantity}</h3>
                 <h3 className='mt-2'>Minimum order quantity: {product.minimum_order}</h3>
             </div>
-            <div className='mx-8 absolute bottom-4'>
-                <button className='btn btn-outline btn-sm mr-28'>Update</button>
-                <button onClick={deleteProduct} className='btn btn-outline btn-sm'>Delete</button>
+            <div className='mx-8 absolute bottom-4 flex'>
+                <button onClick={update} className='btn btn-outline btn-sm'>Update</button>
+                <button onClick={deleteProduct} className='btn btn-outline btn-sm ml-32'>Delete</button>
             </div>
         </div>
     );
