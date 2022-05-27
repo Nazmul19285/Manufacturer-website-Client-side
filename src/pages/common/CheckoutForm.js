@@ -13,7 +13,7 @@ const CheckoutForm = ({ order }) => {
 
     useEffect(() => {
         if (price) {
-            fetch("http://localhost:5000/create-payment-intent", {
+            fetch("https://floating-tundra-63405.herokuapp.com/create-payment-intent", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -69,7 +69,7 @@ const CheckoutForm = ({ order }) => {
     }
     useEffect(() => {
         if(!isEmpty(paymentInfo)){
-            fetch(`http://localhost:5000/orders/${order._id}`, {
+            fetch(`https://floating-tundra-63405.herokuapp.com/orders/${order._id}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json"

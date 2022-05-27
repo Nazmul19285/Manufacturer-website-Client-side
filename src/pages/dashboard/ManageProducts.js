@@ -1,7 +1,18 @@
 import React from 'react';
 import taka from '../../images/taka.png'
 
-const ManageProducts = ({product}) => {
+const ManageProducts = ({ product, setReload, reload }) => {
+    const deleteProduct = () => {
+        const proceed = window.confirm('You want to delete. Are you sure?');
+        if (proceed) {
+            const url = `http://localhost:5000/products/${product._id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(result => setReload(!reload));
+        }
+    }
     return (
         <div className='border w-[22rem] mx-auto mb-4 lg:mb-0 bg-white hover:drop-shadow-2xl relative rounded-lg'>
             <div className='flex justify-center'>
@@ -17,13 +28,9 @@ const ManageProducts = ({product}) => {
                 <h3 className='mt-2'>Available quantity: {product.available_quantity}</h3>
                 <h3 className='mt-2'>Minimum order quantity: {product.minimum_order}</h3>
             </div>
-            <div className='flex justify-center mt-4 absolute inset-x-0 bottom-0 mb-2'>
-                <button className="bg-white hover:bg-gray-100 text-gray-800 py-2 px-4 border border-gray-400 rounded shadow">
-                    Update
-                </button>
-                <button className="bg-white hover:bg-gray-100 text-gray-800 py-2 px-4 border border-gray-400 rounded shadow">
-                    Delete
-                </button>
+            <div className='mx-8 absolute bottom-4'>
+                <button className='btn btn-outline btn-sm mr-28'>Update</button>
+                <button onClick={deleteProduct} className='btn btn-outline btn-sm'>Delete</button>
             </div>
         </div>
     );

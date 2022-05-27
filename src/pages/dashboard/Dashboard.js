@@ -11,7 +11,7 @@ const Dashboard = () => {
     const [adminChecker, setAdminChecker] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://floating-tundra-63405.herokuapp.com/user/${user.email}`)
             .then(res => res.json())
             .then(data => setUserInDb(data));
     }, [])

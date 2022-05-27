@@ -9,7 +9,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/userorders?email=${user.email}`)
+            fetch(`https://floating-tundra-63405.herokuapp.com/userorders?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => setOrders(data));
         }
@@ -17,14 +17,14 @@ const MyOrders = () => {
     const cancelOrder = (id) =>{
         const proceed = window.confirm('Are you sure?');
         if(proceed){
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://floating-tundra-63405.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
             .then(res => res.json())
             .then(result => {
                 if (user) {
-                    fetch(`http://localhost:5000/userorders?email=${user.email}`)
+                    fetch(`https://floating-tundra-63405.herokuapp.com/userorders?email=${user.email}`)
                         .then(res => res.json())
                         .then(data => setOrders(data));
                 }

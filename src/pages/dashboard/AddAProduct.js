@@ -14,7 +14,7 @@ const AddAProduct = () => {
             price: e.target[3].value,
             category: e.target[6].value,
         };
-        const url = 'http://localhost:5000/products';
+        const url = 'https://floating-tundra-63405.herokuapp.com/products';
         fetch(url, {
             method: 'POST',
             headers: {

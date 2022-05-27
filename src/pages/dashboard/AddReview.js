@@ -9,7 +9,7 @@ const AddReview = () => {
     const today = new Date().toDateString();
 
     useEffect( () => {
-        fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://floating-tundra-63405.herokuapp.com/user/${user.email}`)
         .then(res => res.json())
         .then(data => setUserInDb(data));
     },[user])
@@ -25,7 +25,7 @@ const AddReview = () => {
             review:`${event.target[1].value}`,
             
         };
-        const url = 'http://localhost:5000/reviews';
+        const url = 'https://floating-tundra-63405.herokuapp.com/reviews';
         fetch(url, {
             method: 'POST',
             headers: {

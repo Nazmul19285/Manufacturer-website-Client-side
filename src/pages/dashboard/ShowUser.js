@@ -6,7 +6,7 @@ const ShowUser = ({ user, setReload, reload }) => {
         const data = {
             role: 'admin',
         };
-        const url = `http://localhost:5000/user/${user.email}`;
+        const url = `https://floating-tundra-63405.herokuapp.com/user/${user.email}`;
         fetch(url, {
             method: 'PATCH',
             headers: {

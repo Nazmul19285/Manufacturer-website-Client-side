@@ -29,7 +29,7 @@ const MyProfile = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://floating-tundra-63405.herokuapp.com/user/${user.email}`)
             .then(res => res.json())
             .then(data => setUserInDb(data));
     }, [user, userInDb])
@@ -42,7 +42,7 @@ const MyProfile = () => {
             linkedIn: linkedIn,
             facebook: facebook,
         };
-        const url = `http://localhost:5000/user/${user.email}`;
+        const url = `https://floating-tundra-63405.herokuapp.com/user/${user.email}`;
         fetch(url, {
             method: 'PATCH',
             headers: {
