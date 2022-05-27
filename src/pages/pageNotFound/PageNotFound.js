@@ -13,7 +13,7 @@ const PageNotFound = () => {
         <div style={myStyle} className='flex justify-center'>
             <div className='flex mt-72 lg:mt-80 glass bg-gray-50 h-28 px-4 pt-4 pb-2 fixed rounded-xl'>
                 <h1 className='text-6xl text-blue-900 font-bold'>404</h1>
-                <div class="divider divider-horizontal"></div>
+                <div className="divider divider-horizontal"></div>
                 <div className=''>
                     <h1 className='text-6xl font-bold'>Page Not Found</h1>
                     <p className='text-lg'>Please, check the URL in the address bar and try again</p>

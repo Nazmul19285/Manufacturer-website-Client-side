@@ -22,10 +22,10 @@ const Home = () => {
                     products.slice(0, 4).map(product => <DisplayProduct key={product._id} product={product}></DisplayProduct>)
                 }
             </div>
-            <div class="divider"></div> 
+            <div className="divider"></div> 
             <h1 className='text-center text-3xl mt-3 font-medium my-8'><span className='mr-4'>R E V I E W S</span></h1>
             <Reviews></Reviews>
-            <div class="divider"></div> 
+            <div className="divider"></div> 
             <h1 className='text-center text-xl my-20 font-medium'><span className='mr-4'>B U S I N E S S</span>  S U M M A R Y</h1>
             <BusinessSummery></BusinessSummery>
         </div>

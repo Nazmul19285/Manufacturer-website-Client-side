@@ -10,7 +10,7 @@ const ManageProducts = ({ product, setReload, reload }) => {
     const deleteProduct = () => {
         const proceed = window.confirm('You want to delete. Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/products/${product._id}`;
+            const url = `https://floating-tundra-63405.herokuapp.com/products/${product._id}`;
             fetch(url, {
                 method: 'DELETE'
             })

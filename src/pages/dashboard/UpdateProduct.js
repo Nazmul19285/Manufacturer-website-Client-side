@@ -34,7 +34,7 @@ const UpdateProduct = () => {
 
     useEffect(() => {
         if (id) {
-            fetch(`http://localhost:5000/products/${id.id}`)
+            fetch(`https://floating-tundra-63405.herokuapp.com/products/${id.id}`)
                 .then(res => res.json())
                 .then(data => {
                     setProduct(data);
@@ -61,7 +61,7 @@ const UpdateProduct = () => {
             minimum_order: minimumOrder,
             available_quantity: availableQuantity,
         };
-        const url = `http://localhost:5000/products/${product._id}`;
+        const url = `https://floating-tundra-63405.herokuapp.com/products/${product._id}`;
         fetch(url, {
             method: 'PATCH',
             headers: {
@@ -79,19 +79,19 @@ const UpdateProduct = () => {
     return (
         <div className='flex justify-center mt-12 px-4'>
             <div className='w-[360px]'>
-                <label class="label"><span class="label-text">Name</span></label>
-                <input onChange={getName} type="text" class="input input-bordered w-full max-w-xs" value={name} />
+                <label className="label"><span className="label-text">Name</span></label>
+                <input onChange={getName} type="text" className="input input-bordered w-full max-w-xs" value={name} />
 
-                <label class="label"><span class="label-text">Description</span></label>
-                <textarea onChange={getDescription} type="text" class="input w-full input-bordered max-w-xs" value={description} />
+                <label className="label"><span className="label-text">Description</span></label>
+                <textarea onChange={getDescription} type="text" className="input w-full input-bordered max-w-xs" value={description} />
 
-                <label class="label"><span class="label-text">Price</span></label>
+                <label className="label"><span className="label-text">Price</span></label>
                 <input onChange={getPrice} className="input input-bordered w-full max-w-xs appearance-none" type="number" value={price} />
 
-                <label class="label"><span class="label-text">Available Quantity</span></label>
+                <label className="label"><span className="label-text">Available Quantity</span></label>
                 <input onChange={getAvailableQuantity} className="input input-bordered w-full max-w-xs appearance-none" type="number" value={availableQuantity} />
 
-                <label class="label"><span class="label-text">Minimum Order</span></label>
+                <label className="label"><span className="label-text">Minimum Order</span></label>
                 <input onChange={getMinimumOrder} className="input input-bordered w-full max-w-xs appearance-none" type="number" value={minimumOrder} />
 
                 <button onClick={update} className='btn mt-8'>Update</button>
