@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 
 const AddAProduct = () => {
+    const [image, setImage] = useState();
+    const imgbbApiKey = '40aba2d8cab92ff9f201339a847d5ef6';
 
-    const addProduct = (e) => {
+    const uploadImage = () => {
+        const formData = new FormData();
+        formData.append('image', image);
+        const url = `https://api.imgbb.com/1/upload?key=${imgbbApiKey}`;
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(result => setImage(result.data.url));
+    };
+
+    const addProduct = async (e) => {
         e.preventDefault();
         const data = {
             name: e.target[0].value,
-            img: e.target[1].value,
-            description: e.target[2].value,
-            minimum_order: e.target[5].value,
-            available_quantity: e.target[4].value,
-            price: e.target[3].value,
-            category: e.target[6].value,
+            img: image,
+            description: e.target[1].value,
+            minimum_order: e.target[4].value,
+            available_quantity: e.target[3].value,
+            price: e.target[2].value,
+            category: e.target[5].value,
         };
         const url = 'https://floating-tundra-63405.herokuapp.com/products';
         fetch(url, {
@@ -31,7 +45,6 @@ const AddAProduct = () => {
                 e.target[5].value = ' ';
                 e.target[4].value = ' ';
                 e.target[3].value = ' ';
-                e.target[6].value = ' ';
             });
 
     }
@@ -39,13 +52,17 @@ const AddAProduct = () => {
         <div className='w-[360px] mx-auto mt-8 bg-white drop-shadow-lg px-4 py-8'>
             <div>
                 <h1 className='text-center text-xl font-bold mb-6'>Product Information</h1>
+                <div className='grid mb-4'>
+                    <label className='text-xs text-gray-400'>Upload Picture</label>
+                    <input className='border-2 px-4 py-2 w-full' onChange={(e) => setImage(e.target.files[0])} type="file" />
+                    <button onClick={uploadImage} className='btn btn-xs justify-self-end'>Confirm?</button>
+                </div>
                 <form onSubmit={addProduct} >
-                    <input className='border-2 mb-4 px-4 py-2' type="text" placeholder='Product Name' />
-                    <input className='border-2 mb-4 px-4 py-2' type="text" placeholder='Image URL' />
-                    <input className='border-2 mb-4 px-4 py-2' type="text" placeholder='Description' />
-                    <input className='border-2 mb-4 px-4 py-2' type="number" placeholder='Price' />
-                    <input className='border-2 mb-4 px-4 py-2' type="number" placeholder='Available Quantity' />
-                    <input className='border-2 mb-4 px-4 py-2' type="number" placeholder='Minimum Order Quantity' />
+                    <input className='border-2 mb-4 px-4 py-2 w-full' type="text" placeholder='Product Name' />
+                    <textarea className='border-2 mb-4 px-4 py-2 w-full' type="text" placeholder='Description' />
+                    <input className='border-2 mb-4 px-4 py-2 w-full' type="number" placeholder='Price' />
+                    <input className='border-2 mb-4 px-4 py-2 w-full' type="number" placeholder='Available Quantity' />
+                    <input className='border-2 mb-4 px-4 py-2 w-full' type="number" placeholder='Minimum Order Quantity' />
                     <select className='border-2 mb-4 px-4 py-2 w-full'>
                         <option disabled selected>Select Category</option>
                         <option>frame</option>

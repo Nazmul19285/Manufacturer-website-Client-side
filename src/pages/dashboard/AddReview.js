@@ -12,7 +12,8 @@ const AddReview = () => {
         fetch(`https://floating-tundra-63405.herokuapp.com/user/${user.email}`)
         .then(res => res.json())
         .then(data => setUserInDb(data));
-    },[user])
+    },[user]);
+    
     const getReview = (event) => {
         event.preventDefault();
 

@@ -3,12 +3,13 @@ import ShowOrders from './ShowOrders';
 
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
+    const [reload, setReload] = useState(false);
 
     useEffect( () => {
         fetch('https://floating-tundra-63405.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setOrders(data));
-    },[])
+    },[reload])
     return (
         <div>
             <div className="overflow-x-auto w-full">
@@ -26,7 +27,7 @@ const ManageOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map(order => <ShowOrders key={order._id} order={order}></ShowOrders>)
+                            orders.map(order => <ShowOrders key={order._id} order={order} reload={reload} setReload={setReload}></ShowOrders>)
                         }
                     </tbody>
                 </table>
