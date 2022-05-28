@@ -25,17 +25,17 @@ const Purchase = () => {
     }, [product])
 
     useEffect(() => {
-        setTotalPrice(product?.price * quantity);
+        setTotalPrice(parseFloat(product?.price) * parseInt(quantity));
     }, [quantity,product?.price])
 
     const quantityUp = () => {
         if (quantity < product.available_quantity) {
-            setQuantity(quantity + 1);
+            setQuantity(parseInt(quantity) + 1);
         }
     }
     const quantityDown = () => {
         if (quantity > product.minimum_order) {
-            setQuantity(quantity - 1);
+            setQuantity(parseInt(quantity) - 1);
         }
     }
     const getQuantity = (event) => {
@@ -43,7 +43,7 @@ const Purchase = () => {
     }
     const resetQuantity = () => {
         if (quantity < product.minimum_order || quantity > product.available_quantity) {
-            setQuantity(product.minimum_order);
+            setQuantity(parseInt(product.minimum_order));
         }
     }
     const placeOrder = (e) => {

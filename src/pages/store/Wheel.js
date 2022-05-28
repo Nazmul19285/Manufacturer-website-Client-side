@@ -5,7 +5,7 @@ const Wheel = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/category?category=wheel`)
+        fetch(`https://floating-tundra-63405.herokuapp.com/category?category=wheel`)
             .then(res => res.json())
             .then(data => setProducts(data));
 

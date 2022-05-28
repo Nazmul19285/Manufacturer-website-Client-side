@@ -5,7 +5,7 @@ const Frame = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/category?category=frame`)
+        fetch(`https://floating-tundra-63405.herokuapp.com/category?category=frame`)
             .then(res => res.json())
             .then(data => setProducts(data));
 

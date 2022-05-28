@@ -10,7 +10,7 @@ const RequireAdmin = ({ children }) => {
         navigate("/reserve");
     };
     if(user){
-        fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://floating-tundra-63405.herokuapp.com/user/${user.email}`)
         .then(res => res.json())
         .then(data => {
             if(data.role !== 'admin'){

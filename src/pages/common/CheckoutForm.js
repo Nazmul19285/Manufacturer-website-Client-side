@@ -1,6 +1,7 @@
 import { isEmpty } from '@firebase/util';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutForm = ({ order }) => {
     const stripe = useStripe();
@@ -10,6 +11,7 @@ const CheckoutForm = ({ order }) => {
     const [success, setSuccess] = useState('');
     const [clientSecret, setClientSecret] = useState("");
     const [paymentInfo, setPaymentInfo] = useState({});
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (price) {
@@ -64,6 +66,7 @@ const CheckoutForm = ({ order }) => {
             setPayError('');
             setSuccess("Thank You! Payment is Completed");
             setPaymentInfo(paymentIntent);
+            setTimeout(() => {  navigate('/dashboard/myorders'); }, 3000);
         }
 
     }
@@ -74,7 +77,10 @@ const CheckoutForm = ({ order }) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ transactionId: paymentInfo.id }),
+            body: JSON.stringify({ 
+                transactionId: paymentInfo.id,
+                status: 'Paid',
+             }),
         })
             .then(res => res.json())
             .then(data => console.log(data));
