@@ -1,71 +1,41 @@
-# Getting Started with Create React App
+# Live website link of Pedaler
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://pedaler-b750e.web.app/
 
-## Available Scripts
+## About Pedaler
 
-In the project directory, you can run:
+Pedaler is a place of quality parts and accessories for Bicycle and Bicycle Rider.
 
-### `npm start`
+In recent days Bicycle has its huge acceptance and craze over the others. A rider needs a good combination of quality equipment and proper use of tools. Sometimes a Lil bit of guidance could become an enormous amount of help and a Lil effort could build a beautiful community. We are here for you to give proper quality equipment according to your need and exact guidance to maintain quality and perfection.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### About the project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I build this website as the final assignment of my course full stack web development with Jhankar Mahbub.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I used ReactJS for Client side development and NodeJS for Server side development. I used MongoDb for the Database. For Login Authentication I used Firebase. The server side is deployed on Heroku and the website is hosted on Firebase.
 
-### `npm run build`
+### Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Separate access for admin and customers
+2. User can order any product
+3. User can pay with card for an order
+4. User can Place review
+5. User can cancel unpaid orders
+6. User and Admin both can update Profile
+7. Admin can ADD/UPDATE/DELETE any product
+8. Admin can delete unpaid order
+9. Admin can update status te shipped for paid order
+10. Admin can see all user and can make admin other users
+11. The most latest review will display at the top
+12. There a category base sorting option in store to sort products
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Future Work
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I'm working keyword based search option. The feature will be enable soon.
 
-### `npm run eject`
+## What I learned through this Project?
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Patience, hard work, Keep trying, Dealings with Error. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# manufacturer-website-client-side-Nazmul19285
+# Pedaler-Client-Side
