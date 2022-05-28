@@ -26,6 +26,8 @@ import PageNotFound from './pages/pageNotFound/PageNotFound';
 import AddAProduct from './pages/dashboard/AddAProduct';
 import Portfolio from './pages/common/Portfolio';
 import UpdateProduct from './pages/dashboard/UpdateProduct';
+import ProtectedRoute from './pages/pageNotFound/ProtectedRoute';
+import RequireAdmin from './pages/common/RequireAdmin';
 
 function App() {
   return (
@@ -39,9 +41,10 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/payment/:id' element={<RequireAuth><Payment></Payment></RequireAuth>}></Route>
-        <Route path='/addproduct' element={<AddAProduct></AddAProduct>}></Route>
+        <Route path='/addproduct' element={<RequireAdmin><AddAProduct></AddAProduct></RequireAdmin>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
-        <Route path='/products/:id' element={<UpdateProduct></UpdateProduct>}></Route>
+        <Route path='/products/:id' element={<RequireAdmin><UpdateProduct></UpdateProduct></RequireAdmin>}></Route>
+        <Route path='/reserve' element={<ProtectedRoute></ProtectedRoute>}></Route>
         
 
         <Route path='/store' element={<Store></Store>}>
@@ -56,9 +59,9 @@ function App() {
           <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
-          <Route path='manageorders' element={<ManageOrders></ManageOrders>}></Route>
-          <Route path='managestore' element={<ManageStore></ManageStore>}></Route>
-          <Route path='manageuser' element={<ManageUser></ManageUser>}></Route>
+          <Route path='manageorders' element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
+          <Route path='managestore' element={<RequireAdmin><ManageStore></ManageStore></RequireAdmin>}></Route>
+          <Route path='manageuser' element={<RequireAdmin><ManageUser></ManageUser></RequireAdmin>}></Route>
         </Route>
 
         <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
