@@ -3,6 +3,7 @@ import DisplayProduct from '../common/DisplayProduct';
 import BusinessSummery from './BusinessSummery';
 import HomeSlider from './HomeSlider';
 import OrderProcess from './OrderProcess';
+import OurMission from './OurMission';
 import Reviews from './Reviews';
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
             <div className="divider"></div>
             <h1 className='text-center text-xl my-20 font-medium'><span className='mr-4'>B U S I N E S S</span>  S U M M A R Y</h1>
             <BusinessSummery></BusinessSummery>
+            <OurMission></OurMission>
         </div>
     );
 };
