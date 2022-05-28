@@ -14,6 +14,7 @@ const Store = () => {
                         <CustomLink className='ml-4 lg:ml-8 text-sm lg:text-lg' to='wheel'>Wheel</CustomLink>
                         <CustomLink className='ml-4 lg:ml-8 text-sm lg:text-lg' to='frontset'>Front set</CustomLink>
                         <CustomLink className='ml-4 lg:ml-8 text-sm lg:text-lg' to='brakes'>Brakes</CustomLink>
+                        <CustomLink className='ml-4 lg:ml-8 text-sm lg:text-lg' to='others'>Others</CustomLink>
                     </nav>
                 </div>
             </div>

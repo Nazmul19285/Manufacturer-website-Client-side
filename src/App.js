@@ -28,6 +28,7 @@ import Portfolio from './pages/common/Portfolio';
 import UpdateProduct from './pages/dashboard/UpdateProduct';
 import ProtectedRoute from './pages/pageNotFound/ProtectedRoute';
 import RequireAdmin from './pages/common/RequireAdmin';
+import Others from './pages/store/Others';
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
           <Route path='wheel' element={<Wheel></Wheel>}></Route>
           <Route path='frontset' element={<FrontSet></FrontSet>}></Route>
           <Route path='brakes' element={<Brakes></Brakes>}></Route>
+          <Route path='others' element={<Others></Others>}></Route>
         </Route>
         
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>

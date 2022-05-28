@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import DisplayProduct from '../common/DisplayProduct';
 
-const Frame = () => {
+const Others = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/category?category=frame`)
+        fetch(`http://localhost:5000/category?category=others`)
             .then(res => res.json())
             .then(data => setProducts(data));
 
@@ -19,4 +19,4 @@ const Frame = () => {
     );
 };
 
-export default Frame;
+export default Others;
