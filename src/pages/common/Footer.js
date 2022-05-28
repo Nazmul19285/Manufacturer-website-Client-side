@@ -1,12 +1,10 @@
 import React from 'react';
-import { LocationMarkerIcon } from '@heroicons/react/solid'
+import { LocationMarkerIcon, DeviceMobileIcon, InboxIcon } from '@heroicons/react/solid'
 import facebook from '../../images/facebook.gif';
 import github from '../../images/github.gif';
 import instagram from '../../images/instagram.gif';
 import linkedin from '../../images/linkedin.gif';
 import twitter from '../../images/twitter.gif';
-
-import logo from '../../images/logo.png'
 
 import amazonpay from '../../images/paymenticons/amazon-48.png';
 import amex from '../../images/paymenticons/american-express-64.png';
@@ -29,45 +27,58 @@ const Footer = () => {
                     <a target="blank" href="https://twitter.com/MdNazmu24770112"><img className='w-8 lg:w-12 mr-2 rounded-xl hover:border-4' src={twitter} alt="twitter" /></a>
                 </div>
             </div>
+
             <div className='mt-12'>
                 <div className='mx-4 lg:flex justify-center'>
+
                     <div className=''>
-                        <img className='w-32 rotate-[-8deg]' src={logo} alt="" />
                         <div className='flex items-center mt-4 ml-8'>
-                            <LocationMarkerIcon className='w-8 text-gray-500 mr-2'></LocationMarkerIcon>
+                            <LocationMarkerIcon className='w-8 text-gray-400 mr-2'></LocationMarkerIcon>
                             <p className='text-sm'>Akota Tower, Road # 8, Block - A,<br></br> 1st Floor, Section - 1, Mirpur, Dhaka-1216</p>
                         </div>
+                        <div className='flex items-center mt-4 ml-8'>
+                            <DeviceMobileIcon className='w-8 text-gray-400 mr-2'></DeviceMobileIcon>
+                            <p className='text-sm'>+8801628965394</p>
+                        </div>
+                        <div className='flex items-center mt-4 ml-8'>
+                            <InboxIcon className='w-8 text-gray-400 mr-2'></InboxIcon>
+                            <p className='text-sm'>nazmulhossain19285@gmail.com</p>
+                        </div>
                     </div>
+
                     <div className="divider lg:hidden"></div>
-                    <div className='lg:ml-16'>
+                    <div className='lg:ml-16 w-[150px]'>
                         <h1 className='text-md font-bold mb-4'>BLOG</h1>
                         <a href="https://www.youtube.com/watch?v=FDTWeom14oE" className='text-sm hover:font-bold block' target="blank">Saint Martin Island</a>
                         <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Boga Lake</a>
                     </div>
+
                     <div className="divider lg:hidden"></div>
-                    <div className='lg:ml-16'>
+                    <div className='lg:ml-16 w-[150px]'>
                         <h1 className='text-md font-bold mb-4'>ABOUT</h1>
-                        <a href="https://www.youtube.com/watch?v=FDTWeom14oE" className='text-sm hover:font-bold block' target="blank">Who We Are</a>
-                        <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Why We're Different</a>
-                        <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Our Journey</a>
-                        <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Customer Reviews</a>
+                        <a href="/404" className='text-sm hover:font-bold block' target="blank">Who We Are</a>
+                        <a href="/404" className='text-sm hover:font-bold block mt-2' target="blank">Why We're Different</a>
+                        <a href="/404" className='text-sm hover:font-bold block mt-2' target="blank">Our Journey</a>
+                        <a href="/404" className='text-sm hover:font-bold block mt-2' target="blank">Customer Reviews</a>
                     </div>
+
                     <div className="divider lg:hidden"></div>
-                    <div className='lg:ml-16'>
+                    <div className='lg:ml-16 w-[150px]'>
                         <h1 className='text-md font-bold mb-4'>SUPPORT</h1>
-                        <a href="https://www.youtube.com/watch?v=FDTWeom14oE" className='text-sm hover:font-bold block' target="blank">Contact Us</a>
-                        <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Shipping + returns</a>
-                        <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Terms of Service</a>
-                        <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Refund Policy</a>
-                        <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Limited Warranty</a>
-                        <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Privacy Policy</a>
+                        <a href="/404" className='text-sm hover:font-bold block' target="blank">Contact Us</a>
+                        <a href="/404" className='text-sm hover:font-bold block mt-2' target="blank">Shipping + returns</a>
+                        <a href="/404" className='text-sm hover:font-bold block mt-2' target="blank">Terms of Service</a>
+                        <a href='/404' className='text-sm hover:font-bold block mt-2' target="blank">Refund Policy</a>
+                        <a href="/404" className='text-sm hover:font-bold block mt-2' target="blank">Limited Warranty</a>
+                        <a href="/404" className='text-sm hover:font-bold block mt-2' target="blank">Privacy Policy</a>
                     </div>
+
                     <div className="divider lg:hidden"></div>
-                    <div className='lg:ml-16'>
+                    <div className='lg:ml-16 w-[150px]'>
                         <h1 className='text-md font-bold mb-4'>PARTNERS</h1>
-                        <a href="https://www.youtube.com/watch?v=FDTWeom14oE" className='text-sm hover:font-bold block' target="blank">Find a Store</a>
-                        <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Wholesale Info</a>
-                        <a href="https://www.youtube.com/watch?v=9z6UuYwF5fs" className='text-sm hover:font-bold block mt-2' target="blank">Affiliates</a>
+                        <a href="/404" className='text-sm hover:font-bold block' target="blank">Find a Store</a>
+                        <a href="/404" className='text-sm hover:font-bold block mt-2' target="blank">Wholesale Info</a>
+                        <a href="/404" className='text-sm hover:font-bold block mt-2' target="blank">Affiliates</a>
                     </div>
                 </div>
                 <div className='flex justify-center mt-28 mb-8'>
