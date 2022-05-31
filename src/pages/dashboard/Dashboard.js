@@ -28,7 +28,7 @@ const Dashboard = () => {
     }, [userInDb])
     return (
         <div className='lg:grid lg:grid-cols-6 mx-4 lg:mx-16 mt-8'>
-            <div className='flex lg:flex-col justify-center lg:justify-start lg:space-y-4 lg:mr-16 mb-8'>
+            <div className='lg:flex lg:flex-col justify-center lg:justify-start lg:space-y-4 lg:mr-16 mb-8'>
                 <CustomLink className='text-sm lg:text-lg ml-6' to='myprofile'>My Profile</CustomLink>
                 {
                     adminChecker ? <CustomLink className='text-sm lg:text-lg ml-6' to='manageorders'>Manage Orders</CustomLink> : <CustomLink className='text-sm lg:text-lg ml-6' to='myorders'>My Orders</CustomLink>
