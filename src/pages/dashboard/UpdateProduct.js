@@ -34,7 +34,7 @@ const UpdateProduct = () => {
 
     useEffect(() => {
         if (id) {
-            fetch(`https://floating-tundra-63405.herokuapp.com/products/${id.id}`)
+            fetch(`https://manufacturer-website-server-side-0oju.onrender.com/products/${id.id}`)
                 .then(res => res.json())
                 .then(data => {
                     setProduct(data);
@@ -61,7 +61,7 @@ const UpdateProduct = () => {
             minimum_order: minimumOrder,
             available_quantity: availableQuantity,
         };
-        const url = `https://floating-tundra-63405.herokuapp.com/products/${product._id}`;
+        const url = `https://manufacturer-website-server-side-0oju.onrender.com/products/${product._id}`;
         fetch(url, {
             method: 'PATCH',
             headers: {

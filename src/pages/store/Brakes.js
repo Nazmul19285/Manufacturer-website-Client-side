@@ -5,7 +5,7 @@ const Brakes = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`https://floating-tundra-63405.herokuapp.com/category?category=brakes`)
+        fetch(`https://manufacturer-website-server-side-0oju.onrender.com/category?category=brakes`)
             .then(res => res.json())
             .then(data => setProducts(data));
 

@@ -16,7 +16,7 @@ const ShowOrders = ({ order, setReload, reload }) => {
     const cancelOrder = () => {
         const proceed = window.confirm('You want to Cancel? Are you sure?');
         if (proceed) {
-            const url = `https://floating-tundra-63405.herokuapp.com/orders/${order._id}`;
+            const url = `https://manufacturer-website-server-side-0oju.onrender.com/orders/${order._id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -28,7 +28,7 @@ const ShowOrders = ({ order, setReload, reload }) => {
     };
 
     const shippedOrder = () => {
-        fetch(`https://floating-tundra-63405.herokuapp.com/orders/${order._id}`, {
+        fetch(`https://manufacturer-website-server-side-0oju.onrender.com/orders/${order._id}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json"
@@ -43,7 +43,7 @@ const ShowOrders = ({ order, setReload, reload }) => {
     };
 
     useEffect(() => {
-        fetch(`https://floating-tundra-63405.herokuapp.com/user/${user.email}`)
+        fetch(`https://manufacturer-website-server-side-0oju.onrender.com/user/${user.email}`)
             .then(res => res.json())
             .then(data => setUserInDb(data));
     }, []);

@@ -7,7 +7,7 @@ const Reviews = () => {
     const [reload, setReload] = useState(false);
 
     useEffect( () => {
-        fetch('https://floating-tundra-63405.herokuapp.com/reviews')
+        fetch('https://manufacturer-website-server-side-0oju.onrender.com/reviews')
         .then(res => res.json())
         .then(data => {
             setReviews(data);

@@ -34,7 +34,7 @@ const MyProfile = () => {
     };
 
     useEffect(() => {
-        fetch(`https://floating-tundra-63405.herokuapp.com/user/${user.email}`)
+        fetch(`https://manufacturer-website-server-side-0oju.onrender.com/user/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setUserInDb(data);
@@ -65,7 +65,7 @@ const MyProfile = () => {
                 const data = {
                     image: result.data.url,
                 };
-                const url = `https://floating-tundra-63405.herokuapp.com/user/${user.email}`;
+                const url = `https://manufacturer-website-server-side-0oju.onrender.com/user/${user.email}`;
                 fetch(url, {
                     method: 'PATCH',
                     headers: {
@@ -92,7 +92,7 @@ const MyProfile = () => {
             linkedIn: linkedIn,
             facebook: facebook,
         };
-        const url = `https://floating-tundra-63405.herokuapp.com/user/${user.email}`;
+        const url = `https://manufacturer-website-server-side-0oju.onrender.com/user/${user.email}`;
         fetch(url, {
             method: 'PATCH',
             headers: {

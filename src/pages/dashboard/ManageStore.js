@@ -7,7 +7,7 @@ const ManageStore = () => {
     const [reload, setReload] = useState(false);
 
     useEffect(() => {
-        fetch('https://floating-tundra-63405.herokuapp.com/products')
+        fetch('https://manufacturer-website-server-side-0oju.onrender.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [reload])

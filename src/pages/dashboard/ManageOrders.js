@@ -6,7 +6,7 @@ const ManageOrders = () => {
     const [reload, setReload] = useState(false);
 
     useEffect( () => {
-        fetch('https://floating-tundra-63405.herokuapp.com/orders')
+        fetch('https://manufacturer-website-server-side-0oju.onrender.com/orders')
         .then(res => res.json())
         .then(data => setOrders(data));
     },[reload])

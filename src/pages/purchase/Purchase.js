@@ -15,7 +15,7 @@ const Purchase = () => {
     const [totalPrice, setTotalPrice] = useState();
 
     useEffect(() => {
-        fetch(`https://floating-tundra-63405.herokuapp.com/products/${_id}`)
+        fetch(`https://manufacturer-website-server-side-0oju.onrender.com/products/${_id}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [_id])
@@ -61,7 +61,7 @@ const Purchase = () => {
             status: 'Unpaid',
             transactionId: '',
         };
-        const url = 'https://floating-tundra-63405.herokuapp.com/orders';
+        const url = 'https://manufacturer-website-server-side-0oju.onrender.com/orders';
         fetch(url, {
             method: 'POST',
             headers: {

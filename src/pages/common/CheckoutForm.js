@@ -15,7 +15,7 @@ const CheckoutForm = ({ order }) => {
 
     useEffect(() => {
         if (price) {
-            fetch("https://floating-tundra-63405.herokuapp.com/create-payment-intent", {
+            fetch("https://manufacturer-website-server-side-0oju.onrender.com/create-payment-intent", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -72,7 +72,7 @@ const CheckoutForm = ({ order }) => {
     }
     useEffect(() => {
         if(!isEmpty(paymentInfo)){
-            fetch(`https://floating-tundra-63405.herokuapp.com/orders/${order._id}`, {
+            fetch(`https://manufacturer-website-server-side-0oju.onrender.com/orders/${order._id}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json"

@@ -5,7 +5,7 @@ const FrontSet = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`https://floating-tundra-63405.herokuapp.com/category?category=front set`)
+        fetch(`https://manufacturer-website-server-side-0oju.onrender.com/category?category=front set`)
             .then(res => res.json())
             .then(data => setProducts(data));
 

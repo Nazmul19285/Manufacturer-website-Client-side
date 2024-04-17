@@ -28,7 +28,7 @@ const AddAProduct = () => {
             price: e.target[2].value,
             category: e.target[5].value,
         };
-        const url = 'https://floating-tundra-63405.herokuapp.com/products';
+        const url = 'https://manufacturer-website-server-side-0oju.onrender.com/products';
         fetch(url, {
             method: 'POST',
             headers: {

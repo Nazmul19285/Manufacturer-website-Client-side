@@ -9,7 +9,7 @@ const AddReview = () => {
     const today = new Date().toDateString();
 
     useEffect( () => {
-        fetch(`https://floating-tundra-63405.herokuapp.com/user/${user.email}`)
+        fetch(`https://manufacturer-website-server-side-0oju.onrender.com/user/${user.email}`)
         .then(res => res.json())
         .then(data => setUserInDb(data));
     },[user]);
@@ -26,7 +26,7 @@ const AddReview = () => {
             review:`${event.target[1].value}`,
             
         };
-        const url = 'https://floating-tundra-63405.herokuapp.com/reviews';
+        const url = 'https://manufacturer-website-server-side-0oju.onrender.com/reviews';
         fetch(url, {
             method: 'POST',
             headers: {

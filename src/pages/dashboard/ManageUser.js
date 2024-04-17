@@ -6,7 +6,7 @@ const ManageUser = () => {
     const [reload, setReload] = useState(false);
 
     useEffect(() => {
-        fetch('https://floating-tundra-63405.herokuapp.com/users')
+        fetch('https://manufacturer-website-server-side-0oju.onrender.com/users')
             .then(res => res.json())
             .then(data => setUsers(data));
     }, [reload])
