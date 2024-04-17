@@ -8,7 +8,7 @@ const useSetUser = user => {
             
         };
         if (email) {
-            const url = `https://floating-tundra-63405.herokuapp.com/user/${email}`;
+            const url = `https://manufacturer-website-server-side-0oju.onrender.com/user/${email}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
