@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeSlider = () => {
     return (
-        <div className="carousel w-full">
+        <div className="carousel max-h-[700px]">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src="https://i.postimg.cc/VktyqZqJ/7qtw-gm0s-210907.jpg" alt='slide1' className="w-full"/>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
