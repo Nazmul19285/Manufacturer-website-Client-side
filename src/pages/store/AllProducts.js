@@ -10,7 +10,6 @@ const AllProducts = () => {
         .then(data => setProducts(data));
     },[])
 
-    // console.log(products);
 
     return (
         <div className='mt-8 lg:w-10/12 lg:grid lg:grid-cols-4 gap-4 mx-auto mb-20'>

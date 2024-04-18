@@ -3,7 +3,7 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const AddAProduct = () => {
     const [image, setImage] = useState();
-    const imgbbApiKey = '40aba2d8cab92ff9f201339a847d5ef6';
+    const imgbbApiKey = 'add0d86c38ce27616ee9ee02db1cabe3';
 
     const uploadImage = () => {
         const formData = new FormData();
@@ -16,6 +16,8 @@ const AddAProduct = () => {
         .then(res => res.json())
         .then(result => setImage(result.data.url));
     };
+
+    // console.log(image);
 
     const addProduct = async (e) => {
         e.preventDefault();
