@@ -114,16 +114,16 @@ const MyProfile = () => {
                     <div className='w-32 h-32 bg-green-400 rounded-full mr-6 mb-6'>
                         <img className='rounded-full' src={userInDb.image} alt="" />
                     </div>
-                    <label for="my-modal" class="btn btn-xs modal-button">Change Picture</label>
-                    <input type="checkbox" id="my-modal" class="modal-toggle" />
-                    <div class="modal">
-                        <div class="modal-box">
+                    <label for="my-modal" className="btn btn-xs modal-button">Change Picture</label>
+                    <input type="checkbox" id="my-modal" className="modal-toggle" />
+                    <div className="modal">
+                        <div className="modal-box">
                             <div className='flex justify-between'>
                                 <input onChange={(e) => setImage(e.target.files[0])} type="file" />
                                 <label for="my-modal" className="btn btn-sm btn-circle">x</label>
                             </div>
-                            <div class="modal-action">
-                                <label onClick={uploadImage} for="my-modal" class="btn btn-sm mt-6">Upload</label>
+                            <div className="modal-action">
+                                <label onClick={uploadImage} for="my-modal" className="btn btn-sm mt-6">Upload</label>
                             </div>
                         </div>
                     </div>

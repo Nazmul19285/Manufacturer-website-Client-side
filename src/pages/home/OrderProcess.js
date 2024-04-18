@@ -8,8 +8,8 @@ const OrderProcess = () => {
         <div className='mt-12 mb-20'>
             <h1 className='text-center text-xl mt-3 font-medium mb-8'>How to order from Pedaler ?</h1>
             <div className='flex justify-center'>
-                <div class="stats stats-vertical lg:stats-horizontal shadow">
-                    <div class="stat py-8 flex">
+                <div className="stats stats-vertical lg:stats-horizontal shadow">
+                    <div className="stat py-8 flex">
                         <img className='lg:w-20 lg:h-20 w-12 h-12' src={tap} alt="" />
                         <div>
                             <h1 className='text-center text-2xl lg:text-4xl font-bold mb-6 text-yellow-900'>Place Order</h1>
@@ -18,7 +18,7 @@ const OrderProcess = () => {
                         </div>
                     </div>
 
-                    <div class="stat py-8 flex">
+                    <div className="stat py-8 flex">
                         <img className='lg:w-20 lg:h-20 w-12 h-12' src={payment} alt="" />
                         <div>
                             <h1 className='text-center text-2xl lg:text-4xl font-bold mb-6 text-gray-600'>Easy Payment</h1>
@@ -27,7 +27,7 @@ const OrderProcess = () => {
                         </div>
                     </div>
 
-                    <div class="stat py-8 flex">
+                    <div className="stat py-8 flex">
                         <img className='lg:w-20 lg:h-20 w-12 h-12' src={delivery} alt="" />
                         <div>
                             <h1 className='text-center text-2xl lg:text-4xl font-bold mb-6 text-blue-900'>Fast Delivery</h1>
